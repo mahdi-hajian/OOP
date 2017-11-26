@@ -8,9 +8,11 @@ namespace oop.Models
 {
     class Stuff
     {
-        private int _stuffId;
+        //-------Field----------
+        private int _stuffId;                                // فیلد ها با حرف کوچک و ـ اولش شروع میشود
 
-        public int StuffId
+        //-------Method----------
+        public int StuffId                                   //متد با حرف بزرگ شروع میشود
         {
             get { return _stuffId; }
             set { _stuffId = value; }
@@ -32,13 +34,14 @@ namespace oop.Models
             set { _price = value; }
         }
         //--------------------------------
-        public Stuff(int stuffId,string name,int price)
+        //-------Constactor----------
+        public Stuff(int stuffId,string name,int price)      //پارامتر با حرف کوچک شروع میشود
         {
             _stuffId = stuffId;
             _name = name;
             _price = price;
         }
-        public Stuff():this(-1,string.Empty,-1)
+        public Stuff():this(-1,string.Empty,-1)    //برای ننوشتن دوباره پارامتر ها با دیس مینویسیم و پاس میکنم هرچی میخایم
         {
 
         }

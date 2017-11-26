@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace oop_4.Models
 {
+    /// <summary>
+    /// اطلاعات کالا
+    /// </summary>
     class Stuff
     {
         private int _id;
@@ -29,18 +32,30 @@ namespace oop_4.Models
             get { return _price; }
             set { _price = value; }
         }
+        /// <summary>
+        /// Constactor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="price"></param>
         public Stuff(int id,string name,int price)
         {
             _id = id;
             _name = name;
             _price = price;
         }
+        
         public Stuff():this(-1,string.Empty,-1)
         {
 
         }
     }
     //------------------------------------------------
+    /// <summary>
+    /// مورد های فاکتور
+    /// یکی اطلاعات خوده کالا
+    /// یکی تعداد کالا ها
+    /// </summary>
     class InvoiceItem
     {
         private int _count;
@@ -57,14 +72,21 @@ namespace oop_4.Models
             get { return _stuff; }
             set { _stuff = value; }
         }
-
-        public InvoiceItem(Stuff s,int count)
+        /// <summary>
+        /// گرفتن کالا و تعداد
+        /// </summary>
+        /// <param name="stuff"></param>
+        /// <param name="count"></param>
+        public InvoiceItem(Stuff stuff,int count)
         {
-            _stuff = s;
+            _stuff = stuff;
             _count = count;
         }
     }
     //-------------------------------------
+    /// <summary>
+    /// خوده فاکتور ک آیدی فاکتور و تاریخ ثبت فاکتور دارد
+    /// </summary>
     class Invoice
     {
         private int _id;
@@ -82,15 +104,25 @@ namespace oop_4.Models
             set { _date = value; }
         }
 
+        /// <summary>
+        /// یک لیست درست میکنیم ک جنس مورد های فاکتور را دارا میباشد
+        /// یادآوری : یکی اطلاعات کالا یکی تعداد
+        /// </summary>
         private List<InvoiceItem> _items;
-
+        /// <summary>
+        /// ایدی فاکتور و تاریخ فاکتور
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="date"></param>
         public Invoice(int id,DateTime date)
         {
             _id = id;
             _date = date;
 
+            //چون جنسش یک ابجکت است باید هردفعه ک میخاهد اضافه کنن به لیست باید لیست نیو شود
             _items = new List<InvoiceItem>();
         }
+
         public Invoice():this(-1,new DateTime())
         {
 
@@ -103,16 +135,20 @@ namespace oop_4.Models
             _items.Add(temp);
         }
 
+        /// <summary>
+        /// تابع دریافت کل هزینه ی فاکتور
+        /// </summary>
+        /// <returns></returns>
         public int CalculateTotalSum()
         {
             int sum = 0;
             for (int i = 0; i < _items.Count; i++)
             {
                 sum = sum + _items[i].Count * _items[i].Stuff.Price;
-            }
-
-            return sum;
-
+            }            
+            return sum ;
         }
+
+       
     }
 }

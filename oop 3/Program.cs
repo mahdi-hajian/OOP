@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using oop.Models;
 using Telegram.Bot;
 
+//تمرین کلاس نویسی
+
 namespace oop
 {
     class Program
@@ -66,7 +68,7 @@ namespace oop
 
                 Console.WriteLine("Name of {0} stuff is  : {1}", i + 1, kalaHa[i].Name);
 
-                Console.WriteLine("Price of {0} stuff is  : {1}", i + 1, kalaHa[i].Price);
+                 Console.WriteLine("Price of {0} stuff is  : {1}", i + 1, kalaHa[i].Price);
                 Console.WriteLine("off of {0} stuff is  : {1}\n-------------------------------", i + 1, kalaHa[i].GetDisCount(0.2));    //برای گرفتن تخفیف
             }
 
