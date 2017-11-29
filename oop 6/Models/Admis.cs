@@ -48,6 +48,11 @@ namespace oop_6.Models
         {
             return (int)(base.CalculateNetIncomEmployee() * (1 + _managemetntCoefficent));
         }
+
+        static public int ca()
+        {
+            return 2 + 2;
+        }
         
     }
 }
