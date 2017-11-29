@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop 6", "oop 6\oop 6.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indexer_enum_Extension", "indexer_enum_Extension\indexer_enum_Extension.csproj", "{9A65EC5C-06DA-4CE4-A154-90748925AC2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic", "Generic\Generic.csproj", "{A10FB58B-049C-4709-A0F3-63F36FF9B692}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9A65EC5C-06DA-4CE4-A154-90748925AC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A65EC5C-06DA-4CE4-A154-90748925AC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A65EC5C-06DA-4CE4-A154-90748925AC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10FB58B-049C-4709-A0F3-63F36FF9B692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10FB58B-049C-4709-A0F3-63F36FF9B692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10FB58B-049C-4709-A0F3-63F36FF9B692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10FB58B-049C-4709-A0F3-63F36FF9B692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
